@@ -40,11 +40,11 @@ void gradientStep() {
     }
 }
 int main() {
-    gradientStep();
+    gradientStep(); //Need to find a way to iteratively loop this step.
 
     //Currently not matching
-    std::cout << weights[0] << " " << weights[1] << " " << weights[2] << std::endl;
-    std::cout << weights[0] + (weights[1]*2104) + (weights[2]*3) << std::endl;
-    std::cout << 71.27 + (0.134 * 2104) << std::endl;
+    std::cout << weights[0] << " " << weights[1] << " " << weights[2] << std::endl;     //Test Output, view the weights.
+    std::cout << weights[0] + (weights[1]*2104) + (weights[2]*3) << std::endl;          //Test output, using the newly trained weights
+    std::cout << 71.27 + (0.134 * 2104) << std::endl;                                   //Output from training set, to test the accuracy.
 }
 
