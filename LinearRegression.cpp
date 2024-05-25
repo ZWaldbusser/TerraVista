@@ -40,7 +40,6 @@ void gradientStep() {
             gradients[j] += error * trainingVal[j][i];
         }
     }
-    //Update "weight vector". Takes the average of the errors. 
     for(int j = 0; j < 3; j++) {
         weights[j] -= alpha * (gradients[j] / 5);
     }

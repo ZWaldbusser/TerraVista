@@ -28,7 +28,8 @@ class Dataset{
     ~Dataset();
 
     float weightedVals(int x);
-    float setWeights(float x, int i);
+    void setWeight(float x, int i);
+    float getWeight(int i);
     int getEntries();
     int getDimensions();
     int getPrice(int x);
@@ -49,16 +50,19 @@ float Dataset::weightedVals(int x) {
     //A function to calculate the weighted inputs. Essentially hTheta(x)
     float retVal = 0;
     if(x < numEntries) {
-        for(int i = 0; i < dimensions; i++){
-            retVal += (weights[i]*trainingVal[i][x]);
+        for(int k = 0; k < dimensions; k++){
+            retVal += (weights[k]*trainingVal[k][x]);
         }
     }
     
-
     return retVal;
 }
-float setWeights(float x, int i) {
-    weights[i] = x;
+
+void Dataset::setWeight(float x, int i) {
+    weights[i] += x;
+}
+float Dataset::getWeight(int i) {
+    return weights[i];
 }
 
 int Dataset::getEntries() {
@@ -68,10 +72,10 @@ int Dataset::getEntries() {
 int Dataset::getDimensions() {
     return dimensions;
 }
-int getPrice(int x) {
+int Dataset::getPrice(int x) {
     return price[x];
 }
-int getTV(int i, int j) {
+int Dataset::getTV(int i, int j) {
     return trainingVal[j][i];
 }
 
