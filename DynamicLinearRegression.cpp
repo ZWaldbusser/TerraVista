@@ -39,10 +39,12 @@ int main() {
     Dataset ds;
     float alpha = 0.01;
     gradientStep(ds, alpha);
-    //ds doesnt get updates
+    //ds gets updates, but those don't look right
     printWeights(ds);
     gradientStep(ds, alpha);
+    printWeights(ds);
     gradientStep(ds, alpha);
+    printWeights(ds);
     
 }
 

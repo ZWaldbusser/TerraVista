@@ -18,7 +18,9 @@ class Dataset{
     int dimensions = 3;
     int trainingVal[3][5] = {{1, 1, 1, 1, 1}, {2104, 1600, 2400, 1416, 3000}, {3, 3, 3, 2, 4}};
     int price[5] = {400, 330, 369, 232, 540};
-    float weights[3] = {0.0, 0.0, 0.0};
+
+    //Weights are the only thing that need to change
+    float* weights;
     float alpha = 0.01;
     //Get a 2-d array
 
@@ -41,6 +43,13 @@ class Dataset{
 
 Dataset::Dataset(){
     //Need to update once I take in new datasets
+    weights = new float[3]();
+
+
+
+
+
+
 }
 Dataset::~Dataset() {
     //Need to update
