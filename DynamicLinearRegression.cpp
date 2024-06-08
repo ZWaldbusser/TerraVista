@@ -17,7 +17,13 @@ void printWeights(Dataset set){
 }
 void gradientStep(Dataset set, float alpha) {
     //New gradients array
-    float* gradients = new float[set.getDimensions()]{0.0};
+    float* gradients = new float[set.getDimensions()];
+    for(int i = 0; i < set.getDimensions(); i++) {
+        gradients[i] = 0.0;
+    }
+
+
+
     for(int i = 0; i < set.getEntries(); i++) {
         //Testing: errors match
         float error = set.weightedVals(i) - set.getPrice(i);
@@ -28,7 +34,7 @@ void gradientStep(Dataset set, float alpha) {
     }
     
     for(int j = 0; j < set.getDimensions(); j++) {
-        set.setWeight(-(alpha * (gradients[j] / 5)), j);
+        set.setWeight((alpha * (gradients[j] / set.getEntries())), j);
     }
 
 }

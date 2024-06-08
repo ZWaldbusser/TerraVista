@@ -27,6 +27,7 @@ class Dataset{
     public:
     //Rule of 3
     Dataset();
+    //Try doing a constructor with a new object that takes in an xml file.
     ~Dataset();
 
     float weightedVals(int x);
@@ -68,7 +69,7 @@ float Dataset::weightedVals(int x) {
 }
 
 void Dataset::setWeight(float x, int i) {
-    weights[i] += x;
+    weights[i] -= x;
 }
 float Dataset::getWeight(int i) {
     return weights[i];
