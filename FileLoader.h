@@ -1,6 +1,9 @@
 #ifndef FILELOADER_H
 #define FILELOADER_H
+
+#include <iostream>
 class FileLoader{
+    //Not even sure if i need this object. Might just be able to do a Dataset(".csv")
 
     private:
     //Blueprinting Idea: An object that loads in xml files for datasets
@@ -12,10 +15,6 @@ class FileLoader{
     The redwine csv has 
     
     */
-
-
-
-
 
     public:
     //Rule of 3 needs to be applied here
@@ -36,9 +35,21 @@ FileLoader::FileLoader(string fileName) {
     //To actually import the csv here.
     //Potentially find a library or end up actually
     //ACTUALLY EDIT THE DATASET
+    ifstream inpFile;
+    inpFile(filename);
+    string line;
+
+    //for all lines
+    while(getline(inpFile, line)) {
+        //Separate based on commas or semicolons
 
 
-    //Not even sure if i need this object. Might just be able to do a Dataset(".csv")
+        //use an adder function on Dataset.h
+    }
+
+
+
+    
 
 
 }
