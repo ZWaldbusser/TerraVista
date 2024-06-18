@@ -2,6 +2,10 @@
 #define FILELOADER_H
 
 #include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
 class FileLoader{
     //Not even sure if i need this object. Might just be able to do a Dataset(".csv")
 
@@ -18,29 +22,31 @@ class FileLoader{
 
     public:
     //Rule of 3 needs to be applied here
+    
     FileLoader();
-    FileLoader(string fileName);
-    FileLoader& operator=(const FileLoader& toCopy);
-    FileLoader();
+    FileLoader(std::string file);
+    //FileLoader& operator=(const FileLoader& toCopy);
+        //Don't plan on using the = operator. Might need to implement anyway
+    ~FileLoader() { cout << "\nDstructor!";};
 
 
 
 };
-
 FileLoader::FileLoader() {
 
 }
 
-FileLoader::FileLoader(string fileName) {
+FileLoader::FileLoader(std::string file){
+
     //To actually import the csv here.
-    //Potentially find a library or end up actually
     //ACTUALLY EDIT THE DATASET
-    ifstream inpFile;
-    inpFile(filename);
+    ifstream inpFile(file);
     string line;
 
     //for all lines
-    while(getline(inpFile, line)) {
+    while(getline (inpFile, line)) {
+        //Successfully takes in the lines. Now to split for each semicolon
+        std::cout << line << std::endl;
         //Separate based on commas or semicolons
 
 
@@ -51,12 +57,14 @@ FileLoader::FileLoader(string fileName) {
 
     
 
-
+    inpFile.close();
 }
 
-FileLoader& FileLoader::operator=(const FileLoader& toCopy){
 
-}
+
+
+
+
 
 
 
