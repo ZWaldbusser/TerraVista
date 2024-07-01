@@ -10,9 +10,9 @@ While I don't have specific dates or goals for this project, I do have a list of
 I'm still at a stage as to whether or not I would like to make these algorithms work, or just use these experiences to tinker with the algorithms.
 
 With that said: here are some more algorithms that I have/would like to experiment with:
-        Linear Regression
+        Linear Regression 
         Logistic Regression
         SVM
 
-While I would like to tinker with neural networks, I'm unsure of how to efficiently implement the required Matrix mathematics in C++. More research will be required.
+While I would like to interact with neural networks, I'm unsure of how to efficiently implement the required Matrix mathematics in C++. More research will be required.
 

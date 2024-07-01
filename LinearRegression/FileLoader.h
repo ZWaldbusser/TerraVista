@@ -8,6 +8,7 @@ using namespace std;
 
 class FileLoader{
     //Not even sure if i need this object. Might just be able to do a Dataset(".csv")
+    bool isSet;
 
     private:
     //Blueprinting Idea: An object that loads in xml files for datasets
@@ -36,7 +37,7 @@ FileLoader::FileLoader() {
 
 }
 
-FileLoader::FileLoader(std::string file){
+FileLoader::FileLoader(std::string file) : isSet(false){
 
     //To actually import the csv here.
     //ACTUALLY EDIT THE DATASET
@@ -45,9 +46,24 @@ FileLoader::FileLoader(std::string file){
 
     //for all lines
     while(getline (inpFile, line)) {
-        //Successfully takes in the lines. Now to split for each semicolon
+        //Split the line at every semicolon
+        if(!isSet) {
+            //Set the dimensions of the dataset on the first iteration
+            //Either alter an existing Dataset, or make a new one.
+
+            //Break the first line up, then set dimensions based on each number
+
+
+
+
+            isSet = true;
+        }
+
+
+
+
+
         std::cout << line << std::endl;
-        //Separate based on commas or semicolons
 
 
         //use an adder function on Dataset.h
