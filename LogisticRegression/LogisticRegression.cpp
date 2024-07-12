@@ -24,4 +24,28 @@ Minimum Loss Function: A function that attempts to minimize loss, and get the tr
 Cost function: -(1/n)*SUMM(y(i)*log(yH(i)) + (1-y(i))*log(1-yH(i)))
 */
 
+//Weights needs to be 2-D
+int numInps;
+int numDims;
 
+//Calculates YHat
+float YHat(float* valInps, float** weights, int coord) {
+    float retVal = 0;
+    for(int i = 0; i < numDims; i++) {
+        retVal += (valInps[i]*weights[coord][i]);
+    }
+    return retVal;
+}
+
+//Calculates Cost Function
+float costFunction(float* valInps, float** weights, int* accVals, int coord){
+    float retVal = 0;
+    
+    for(int i = 0; i < numInps; i++){
+        float YH = YHat(valInps, weights, i);
+        retVal += (accVals[i]*log(YH)) + ((1-accVals[i])*(log(1-YH)));
+    }
+
+
+    return ((1/numInps)*retVal);
+}
