@@ -1,5 +1,6 @@
 
-//Create Functions to implement a hypothetical Logistic Growth Learning model
+//Create Functions to further understand the algorithm
+//Fairly similar to Linear Regression, so I don't intend to code more than I do understand how the model works.
 
 
 //Logistic Regression definition: A regression model used to classify binary data
@@ -47,5 +48,14 @@ float costFunction(float* valInps, float** weights, int* accVals, int coord){
     }
 
 
-    return ((1/numInps)*retVal);
+    return -((1/numInps)*retVal);
+}
+
+//Gradient descent function
+void gradientDescent() {
+
+    //Calculate gradients
+
+    //Update weights
+
 }
