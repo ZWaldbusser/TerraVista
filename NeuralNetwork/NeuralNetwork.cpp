@@ -42,9 +42,14 @@ int main() {
     //Example problem: Given a vector of 0's or 1's, create a neural network to determine if there are any sequence with 3 or more 1's in a row.
         //Generate example training data
         //10 input's, 3 hidden layers, each with an undecided number of neurons
+
+
+
+    //To-Do: Figure out how to link neurons through vectors via the class.
     
     
-    
+
+
     //Train the neural network
         //Research more into this but heres my understanding:
             //Assign random values for each potential weight.
