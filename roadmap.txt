@@ -16,3 +16,8 @@ With that said: here are some more algorithms that I have/would like to experime
 
 While I would like to interact with neural networks, I'm unsure of how to efficiently implement the required Matrix mathematics in C++. More research will be required.
 
+
+
+Update 08/07/2024:
+        In my research and experiementation, I have been unable to effectively implement these algorithms in C++.
+        As such, I have morphed this into a partial learning project as well, where I experiment with the algorithms, but focus less on  the actual implementation for the time being.

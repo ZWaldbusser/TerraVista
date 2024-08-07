@@ -22,16 +22,7 @@ Neuron: A neuron is a node in this network. It contains inputs from other neuron
 //To-do: code functions in c++ that mimic how a neural network functions
     //Research different ways to train neural networks
 
-struct neuron {
-    //Make neurons a class
-    //Neurons will need a sum function, and a sigmoid activation function
-
-    //Each neuron will need the biases of its predecessor connections, and the connections it has to the next layer
-        //Except for inputs and outputs, those are different
-
-};
-
-
+    //Note: this code is not functional.
 
 
 //My lack of having taken linear algebra shows in trying to plan this out.
